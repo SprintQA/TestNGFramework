@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Smoke Suite]" parallel="none">
+  <test name="Smoke Tests">
+    <groups>
+      <run>
+        <exclude name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.automation.tests.OrangeHRMTestNG"/>
+      <class name="com.automation.tests.TestNGMethods"/>
+    </classes>
+  </test> <!-- Smoke Tests -->
+  <test name="Smoke Tests(failed)" parallel="none">
+    <groups>
+      <run>
+        <exclude name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.automation.tests.TestNGMethods">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.automation.tests.TestNGMethods -->
+      <class name="com.automation.tests.OrangeHRMTestNG">
+        <methods>
+          <include name="cleanUp"/>
+          <include name="setUp"/>
+          <include name="verifyLoginSuccessfulForValidCrd"/>
+        </methods>
+      </class> <!-- com.automation.tests.OrangeHRMTestNG -->
+    </classes>
+  </test> <!-- Smoke Tests(failed) -->
+</suite> <!-- Failed suite [Smoke Suite] -->

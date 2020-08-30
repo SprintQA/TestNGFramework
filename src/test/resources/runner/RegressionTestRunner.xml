@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Suite" verbose="1">
+	<test name="Smoke Tests">
+		<groups>
+			<run>
+				<exclude name="smoke" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="com.automation.tests.OrangeHRMTestNG" />
+			<class name="com.automation.tests.TestNGMethods" />
+		</classes>
+	</test>
+</suite>
