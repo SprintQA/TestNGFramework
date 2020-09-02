@@ -6,24 +6,22 @@ import org.testng.annotations.BeforeMethod;
 import com.automation.pages.ForgetPasswordPage;
 import com.automation.pages.HomePage;
 import com.automation.pages.LoginPage;
-import com.automation.pages.SwagHomePage;
-import com.automation.pages.SwagLoginPage;
-import com.automation.pages.SwagPdpPage;
 import com.automation.utility.DriverUtils;
+import com.automation.utility.PropertyReader;
 
 public class BaseTest {
 
-	SwagLoginPage loginPage = new SwagLoginPage();
-	SwagHomePage homePage = new SwagHomePage();
-	SwagPdpPage pdpPage = new SwagPdpPage();
-
-	LoginPage ornageLogin = new LoginPage();
-	HomePage orangeHome = new HomePage();
-	ForgetPasswordPage fpp = new ForgetPasswordPage();
+	LoginPage ornageLogin;
+	HomePage orangeHome;
+	ForgetPasswordPage fpp;
 
 	@BeforeMethod
 	public void setUp() {
+		PropertyReader.initProperties();
 		DriverUtils.createDriver();
+		ornageLogin = new LoginPage();
+		orangeHome = new HomePage();
+		fpp = new ForgetPasswordPage();
 	}
 
 	@AfterMethod

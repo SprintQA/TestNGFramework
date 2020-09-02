@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.automation.utility.CommonMethods;
 import com.automation.utility.DriverUtils;
 
 public class LoginPage extends BasePage {
@@ -41,8 +42,7 @@ public class LoginPage extends BasePage {
 	}
 
 	public void verifyInvalidCredErrorMsg() {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(invalidCredWarningMsg));
+		CommonMethods.waitForElementToBePresent(invalidCredWarningMsg);
 		System.out.println(invalidCredWarningMsg.isDisplayed());
 	}
 

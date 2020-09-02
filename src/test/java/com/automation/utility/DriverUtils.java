@@ -13,7 +13,7 @@ public class DriverUtils {
 
 		driver.manage().window().maximize();
 
-		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.get(PropertyReader.getProperty("url"));
 	}
 
 	public static void quitDriver() {
