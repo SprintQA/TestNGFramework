@@ -1,5 +1,6 @@
 package com.automation.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -26,6 +27,9 @@ public class LoginPage extends BasePage {
 	@FindBy(css = "#spanMessage")
 	WebElement invalidCredWarningMsg;
 
+	@FindBy(id = "divLogo")
+	WebElement loginPageLogo;
+
 	public LoginPage() {
 		this.driver = DriverUtils.getDriver();
 		PageFactory.initElements(driver, this);
@@ -43,7 +47,19 @@ public class LoginPage extends BasePage {
 
 	public void verifyInvalidCredErrorMsg() {
 		CommonMethods.waitForElementToBePresent(invalidCredWarningMsg);
-		System.out.println(invalidCredWarningMsg.isDisplayed());
+		Assert.assertTrue("Invalid login error message is not dispalyed",
+				CommonMethods.isDisplayed(invalidCredWarningMsg));
+	}
+
+	public void verifyLoginPageDisplayed() {
+
+		Assert.assertTrue("Logo on login page is not displayed", CommonMethods.isDisplayed(loginPageLogo));
+
+		Assert.assertTrue("login button on login page is not displayed", CommonMethods.isDisplayed(loginBtn));
+
+		Assert.assertTrue("username on login page is not displayed", CommonMethods.isDisplayed(userNameInput));
+
+		Assert.assertTrue("password on login page is not displayed", CommonMethods.isDisplayed(passwordInput));
 	}
 
 }

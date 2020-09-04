@@ -7,6 +7,7 @@ import com.automation.pages.ForgetPasswordPage;
 import com.automation.pages.HomePage;
 import com.automation.pages.LoginPage;
 import com.automation.utility.DriverUtils;
+import com.automation.utility.ExcelUtils;
 import com.automation.utility.PropertyReader;
 
 public class BaseTest {
@@ -28,4 +29,5 @@ public class BaseTest {
 	public void cleanUp() {
 		DriverUtils.quitDriver();
 	}
+
 }
