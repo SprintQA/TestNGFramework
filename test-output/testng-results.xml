@@ -1,64 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9243" started-at="2020-09-04T01:16:35Z" finished-at="2020-09-04T01:16:44Z">
+  <suite name="Default suite" duration-ms="1836" started-at="2020-09-05T17:48:32Z" finished-at="2020-09-05T17:48:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9243" started-at="2020-09-04T01:16:35Z" finished-at="2020-09-04T01:16:44Z">
+    <test name="Default test" duration-ms="1836" started-at="2020-09-05T17:48:32Z" finished-at="2020-09-05T17:48:34Z">
       <class name="com.automation.tests.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@42d80b78]" name="setUp" is-config="true" duration-ms="7860" started-at="2020-09-04T06:46:35Z" finished-at="2020-09-04T06:46:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="verifyLoginScreen()[pri:0, instance:com.automation.tests.LoginTest@42d80b78]" name="verifyLoginScreen" duration-ms="92" started-at="2020-09-04T06:46:42Z" finished-at="2020-09-04T06:46:42Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@343f4d3d]" name="setUp" is-config="true" duration-ms="0" started-at="2020-09-05T23:18:32Z" finished-at="2020-09-05T23:18:32Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#divLogo"}
-  (Session info: chrome=84.0.4147.135)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[unknown error: cannot find Chrome binary
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'KHICHU', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Users\khima\AppData\Local\Temp\scoped_dir39356_741513877}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54279}, acceptInsecureCerts=false, browserVersion=84.0.4147.135, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
-Session ID: 333bb2e95581b4acf81a9e7de8d2ba36
-*** Element info: {Using=id, value=divLogo}]]>
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00C99563+2725219]
+	Ordinal0 [0x00B98551+1672529]
+	Ordinal0 [0x00A80359+525145]
+	Ordinal0 [0x00A0CA64+51812]
+	Ordinal0 [0x00A2CC37+183351]
+	Ordinal0 [0x00A2CA3D+182845]
+	Ordinal0 [0x00A2A94B+174411]
+	Ordinal0 [0x00A12528+75048]
+	Ordinal0 [0x00A135A0+79264]
+	Ordinal0 [0x00A13539+79161]
+	Ordinal0 [0x00BAD607+1758727]
+	GetHandleVerifier [0x00DB6546+1050150]
+	GetHandleVerifier [0x00DB6291+1049457]
+	GetHandleVerifier [0x00DC10D7+1094071]
+	GetHandleVerifier [0x00DB6B46+1051686]
+	Ordinal0 [0x00BA5B06+1727238]
+	Ordinal0 [0x00BAEB7B+1764219]
+	Ordinal0 [0x00BAECE3+1764579]
+	Ordinal0 [0x00BC4C05+1854469]
+	BaseThreadInitThunk [0x76936359+25]
+	RtlGetAppContainerNamedObjectPath [0x77447C24+228]
+	RtlGetAppContainerNamedObjectPath [0x77447BF4+180]
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#divLogo"}
-  (Session info: chrome=84.0.4147.135)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'KHICHU', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Users\khima\AppData\Local\Temp\scoped_dir39356_741513877}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54279}, acceptInsecureCerts=false, browserVersion=84.0.4147.135, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
-Session ID: 333bb2e95581b4acf81a9e7de8d2ba36
-*** Element info: {Using=id, value=divLogo}
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00C99563+2725219]
+	Ordinal0 [0x00B98551+1672529]
+	Ordinal0 [0x00A80359+525145]
+	Ordinal0 [0x00A0CA64+51812]
+	Ordinal0 [0x00A2CC37+183351]
+	Ordinal0 [0x00A2CA3D+182845]
+	Ordinal0 [0x00A2A94B+174411]
+	Ordinal0 [0x00A12528+75048]
+	Ordinal0 [0x00A135A0+79264]
+	Ordinal0 [0x00A13539+79161]
+	Ordinal0 [0x00BAD607+1758727]
+	GetHandleVerifier [0x00DB6546+1050150]
+	GetHandleVerifier [0x00DB6291+1049457]
+	GetHandleVerifier [0x00DC10D7+1094071]
+	GetHandleVerifier [0x00DB6B46+1051686]
+	Ordinal0 [0x00BA5B06+1727238]
+	Ordinal0 [0x00BAEB7B+1764219]
+	Ordinal0 [0x00BAECE3+1764579]
+	Ordinal0 [0x00BC4C05+1854469]
+	BaseThreadInitThunk [0x76936359+25]
+	RtlGetAppContainerNamedObjectPath [0x77447C24+228]
+	RtlGetAppContainerNamedObjectPath [0x77447BF4+180]
+
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$22(ProtocolHandshake.java:365)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:368)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:159)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.isDisplayed(Unknown Source)
-	at com.automation.pages.LoginPage.verifyLoginPageDisplayed(LoginPage.java:55)
-	at com.automation.tests.LoginTest.verifyLoginScreen(LoginTest.java:17)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:137)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:184)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:171)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:124)
+	at com.automation.utility.DriverUtils.createDriver(DriverUtils.java:18)
+	at com.automation.tests.BaseTest.setUp(BaseTest.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
@@ -79,11 +125,15 @@ Session ID: 333bb2e95581b4acf81a9e7de8d2ba36
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="verifyLoginScreen()[pri:0, instance:com.automation.tests.LoginTest@343f4d3d]" name="verifyLoginScreen" duration-ms="5" started-at="2020-09-05T23:18:34Z" finished-at="2020-09-05T23:18:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginScreen -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.automation.tests.LoginTest@42d80b78]" name="cleanUp" is-config="true" duration-ms="1262" started-at="2020-09-04T06:46:43Z" finished-at="2020-09-04T06:46:44Z">
+        <test-method status="SKIP" signature="cleanUp()[pri:0, instance:com.automation.tests.LoginTest@343f4d3d]" name="cleanUp" is-config="true" duration-ms="0" started-at="2020-09-05T23:18:34Z" finished-at="2020-09-05T23:18:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->

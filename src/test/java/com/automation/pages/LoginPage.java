@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.automation.utility.CommonMethods;
 import com.automation.utility.DriverUtils;
+import com.automation.utility.PropertyReader;
 
 public class LoginPage extends BasePage {
 
@@ -60,6 +61,10 @@ public class LoginPage extends BasePage {
 		Assert.assertTrue("username on login page is not displayed", CommonMethods.isDisplayed(userNameInput));
 
 		Assert.assertTrue("password on login page is not displayed", CommonMethods.isDisplayed(passwordInput));
+	}
+
+	public void openWebsite() {
+		driver.get(PropertyReader.getProperty("url"));
 	}
 
 }

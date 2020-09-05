@@ -34,14 +34,18 @@ public class DriverUtils {
 
 		driver.manage().window().maximize();
 
-		driver.get(PropertyReader.getProperty("url"));
 	}
 
 	public static void quitDriver() {
 		driver.quit();
+		driver=null;
 	}
 
 	public static WebDriver getDriver() {
+		if (driver == null) {
+			PropertyReader.initProperties();
+			createDriver();
+		}
 		return driver;
 	}
 

@@ -10,7 +10,6 @@
     <classes>
       <class name="com.automation.tests.LoginTest">
         <methods>
-          <include name="cleanUp"/>
           <include name="setUp"/>
           <include name="verifyLoginScreen"/>
         </methods>
