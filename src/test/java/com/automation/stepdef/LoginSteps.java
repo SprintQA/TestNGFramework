@@ -24,7 +24,7 @@ public class LoginSteps {
 	public void login_with_invalid_cred() {
 		login.doLogin("invalid", "invalid");
 	}
-	
+
 	@When("verify invalid login error message is displayed")
 	public void verifyInvalidLoginErrorMsg() {
 		login.verifyInvalidCredErrorMsg();

@@ -53,13 +53,9 @@ public class LoginPage extends BasePage {
 	}
 
 	public void verifyLoginPageDisplayed() {
-
 		Assert.assertTrue("Logo on login page is not displayed", CommonMethods.isDisplayed(loginPageLogo));
-
 		Assert.assertTrue("login button on login page is not displayed", CommonMethods.isDisplayed(loginBtn));
-
 		Assert.assertTrue("username on login page is not displayed", CommonMethods.isDisplayed(userNameInput));
-
 		Assert.assertTrue("password on login page is not displayed", CommonMethods.isDisplayed(passwordInput));
 	}
 
