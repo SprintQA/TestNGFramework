@@ -45,6 +45,10 @@ public class LoginPage extends BasePage {
 	public void clickOnForgetPasswordLink() {
 		forgetPassLink.click();
 	}
+	
+	public void fail() {
+		Assert.fail("Failled scenario");
+	}
 
 	public void verifyInvalidCredErrorMsg() {
 		CommonMethods.waitForElementToBePresent(invalidCredWarningMsg);

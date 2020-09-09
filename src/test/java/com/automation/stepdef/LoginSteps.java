@@ -29,5 +29,10 @@ public class LoginSteps {
 	public void verifyInvalidLoginErrorMsg() {
 		login.verifyInvalidCredErrorMsg();
 	}
+	
+	@When("fail me")
+	public void fail_me() {
+		login.fail();
+	}
 
 }
