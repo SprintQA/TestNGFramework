@@ -15,21 +15,17 @@ public class LoginSteps {
 		login.openWebsite();
 	}
 
-	@Then("user login with valid credential")
-	public void user_login_with_valid_credential() {
-		login.doLogin(PropertyReader.getProperty("loginUsername"), PropertyReader.getProperty("loginPassword"));
-	}
-
-	@When("user login with invalid credential")
-	public void login_with_invalid_cred() {
-		login.doLogin("invalid", "invalid");
+	@When("user login with username {string} and password {string}")
+	public void user_login_with_username_and_password(String usernameKey, String passwordKey) {
+		System.out.println("*********" + usernameKey);
+		login.doLogin(PropertyReader.getProperty(usernameKey), PropertyReader.getProperty(passwordKey));
 	}
 
 	@When("verify invalid login error message is displayed")
 	public void verifyInvalidLoginErrorMsg() {
 		login.verifyInvalidCredErrorMsg();
 	}
-	
+
 	@When("fail me")
 	public void fail_me() {
 		login.fail();

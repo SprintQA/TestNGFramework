@@ -2,7 +2,7 @@ Feature: Add user feature testing
 
   Background: 
     Given user opens the website
-    When user login with valid credential
+    When user login with username "valid.username" and password "valid.password"
     Then verify user is on homepage
     When user clicks on User tab under admin and user management menu
     Then verify user is on user listing page

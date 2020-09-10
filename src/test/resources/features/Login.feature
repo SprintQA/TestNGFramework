@@ -5,23 +5,23 @@ Feature: This feature we created to test all login fuctionality
   Background: 
     Given user opens the website
 
-  @Smoke
-  Scenario: Verify login successful for valid cred
-    When user login with valid credential
+  @Smoke1
+  Scenario Outline: Verify login successful for valid user
+    When user login with username "<username>" and password "<password>"
     Then verify user is on homepage
 
-  @Regression @Chirag
-  Scenario: Verify login unsuccessful for valid cred
-    When user login with invalid credential
+    Examples: 
+      | username        | password        |
+      | admin.username  | admin.password  |
+      | normal.username | normal.password |
+
+  @Smoke
+  Scenario Outline: Verify login unsuccessful for invalid cred
+    When user login with username "<username>" and password "<password>"
     Then verify invalid login error message is displayed
 
-  @Regression @Chirag
-  Scenario: Verify login unsuccessful for valid cred
-    When user login with invalid credential
-    Then fail me
-
-  @Regression @Chirag
-  Scenario: Verify login unsuccessful for valid cred
-    When user login with invalid credential
-    Then fail me
-
+    Examples: 
+      | username         | password         |
+      | invalid.username | admin.password   |
+      | admin.username   | invalid.password |
+      | invalid.username | invalid.password |
