@@ -1,6 +1,7 @@
 package com.automation.pages;
 
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -41,6 +42,10 @@ public class EmploymentStatusPage extends BasePage {
 					expData.equalsIgnoreCase(actData));
 
 		}
+	}
+
+	public void verifyEmployeeStatusDataUsingHeader(List<Map<String, String>> data) {
+		CommonMethods.verifyTableData("//table[@id='resultTable']/tbody/tr[%s]/td/a", data);
 	}
 
 }

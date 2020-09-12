@@ -1,7 +1,11 @@
 package com.automation.utility;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -55,6 +59,23 @@ public class CommonMethods {
 	public static void selectDropdownText(WebElement element, String text) {
 		Select select = new Select(element);
 		select.selectByVisibleText(text);
+	}
+
+	public static void verifyTableData(String loc, List<Map<String, String>> data) {
+		for (int i = 0; i < data.size(); i++) {
+			loc = String.format(loc, i + 1);
+			List<WebElement> dataInEachRow = driver.findElements(By.xpath(loc));
+
+			Set<String> setOfKey = data.get(i).keySet();
+			List<String> listOfKey = new ArrayList<String>(setOfKey);
+
+			for (int j = 0; j < listOfKey.size(); j++) {
+				String expData = data.get(i).get(listOfKey.get(j));
+				String actData = dataInEachRow.get(j).getText();
+				System.out.println(expData);
+				System.out.println(actData);
+			}
+		}
 	}
 
 }

@@ -55,11 +55,6 @@ public class UserListingPage extends BasePage {
 
 	public void verifyUsersData(List<List<String>> listOfData) {
 
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 		Assert.assertTrue("Number of exp user and actual user doesn't match", listOfUsers.size() == listOfData.size());
 
 		for (int i = 0; i < listOfData.size(); i++) {
@@ -84,27 +79,29 @@ public class UserListingPage extends BasePage {
 
 	public void verifyUserDataUsingHeader(List<Map<String, String>> listOfData) {
 		
-		
-		for (int i = 0; i < listOfData.size(); i++) {
-			List<WebElement> elemments = driver
-					.findElements(By.xpath("//table[@id='resultTable']/tbody/tr[" + (i + 1) + "]/td[@class='left']"));
+		CommonMethods.verifyTableData("//table[@id='resultTable']/tbody/tr[%s]/td[@class='left']", listOfData);
+//		for (int i = 0; i < listOfData.size(); i++) {
+//			List<WebElement> elemments = driver
+//					.findElements(By.xpath("//table[@id='resultTable']/tbody/tr[" + (i + 1) + "]/td[@class='left']"));
 //			Assert.assertTrue("Username doesn't match with UI", map.get("Username").equals(elemments.get(0).getText()));
 //			Assert.assertTrue("UserRole doesn't match with UI", map.get("UserRole").equals(elemments.get(1).getText()));
 //			Assert.assertTrue("Emp Name doesn't match with UI",map.get("EmployeeName").equals(elemments.get(2).getText()));
 //			Assert.assertTrue("Status doesn't match with UI", map.get("Status").equals(elemments.get(3).getText()));
 
-			Set<String> setOfKey = listOfData.get(i).keySet();
-			List<String> listOfKeys = new ArrayList<String>(setOfKey);
-
-			for (int j = 0; j < listOfKeys.size(); j++) {
-				String expData = listOfData.get(i).get(listOfKeys.get(j));
-				System.out.println(expData);
-				String actData = elemments.get(j).getText();
-				System.out.println(actData);
-				Assert.assertTrue("Expected was - " + expData + " and Actual is -" + actData,
-						expData.equalsIgnoreCase(actData));
-			}
-		}
+//			Set<String> setOfKey = listOfData.get(i).keySet();
+//			List<String> listOfKeys = new ArrayList<String>(setOfKey);
+//
+//			for (int j = 0; j < listOfKeys.size(); j++) {
+//				String expData = listOfData.get(i).get(listOfKeys.get(j));
+//				System.out.println(expData);
+//				String actData = elemments.get(j).getText();
+//				System.out.println(actData);
+//				Assert.assertTrue("Expected was - " + expData + " and Actual is -" + actData,
+//						expData.equalsIgnoreCase(actData));
+//			}
+//		}
+		
+		
 	}
 
 }

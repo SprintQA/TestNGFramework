@@ -1,6 +1,7 @@
 package com.automation.stepdef;
 
 import java.util.List;
+import java.util.Map;
 
 import com.automation.pages.EmploymentStatusPage;
 
@@ -20,5 +21,11 @@ public class EmploymentStatusSteps {
 	public void verify_employee_status_data(DataTable dataTable) {
 		List<String> data = dataTable.asList();
 		employmentPage.verifyEmployeeStatusData(data);
+	}
+	
+	@Then("verify employee status data using header")
+	public void verify_employee_status_data_with_header(DataTable dataTable) {
+		 List<Map<String, String>> data = dataTable.asMaps();
+		employmentPage.verifyEmployeeStatusDataUsingHeader(data);
 	}
 }

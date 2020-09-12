@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 				glue = "com.automation.stepdef",
 				monochrome = true,
 				strict = true,
-				tags = "@datatable1",
+				tags = "@Smoke1",
 				plugin = {"html:report", "json:target/cucumber.json", "rerun:target/rerun.txt"}
 		)
 
