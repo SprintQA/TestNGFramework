@@ -7,11 +7,11 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-				features = "src\\test\\resources\\features\\Login.feature", 
+				features = "src\\test\\resources\\features", 
 				glue = "com.automation.stepdef",
 				monochrome = true,
-				tags = "@Smoke",
 				strict = true,
+				tags = "@datatable1",
 				plugin = {"html:report", "json:target/cucumber.json", "rerun:target/rerun.txt"}
 		)
 

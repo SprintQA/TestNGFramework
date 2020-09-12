@@ -1,7 +1,7 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/EmployeeStatusFeature.feature");
 formatter.feature({
-  "name": "This feature we created to test all login fuctionality",
-  "description": "  Developer - Vildan\n  Tester - Chirag",
+  "name": "Add user feature testing",
+  "description": "",
   "keyword": "Feature"
 });
 formatter.background({
@@ -22,94 +22,77 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.scenario({
-  "name": "Verify login unsuccessful for valid cred",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@Regression"
-    },
-    {
-      "name": "@Chirag"
-    }
-  ]
-});
 formatter.step({
-  "name": "user login with invalid credential",
+  "name": "user login with username \"admin.username\" and password \"admin.password\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.automation.stepdef.LoginSteps.login_with_invalid_cred()"
+  "location": "com.automation.stepdef.LoginSteps.user_login_with_username_and_password(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "fail me",
+  "name": "verify user is on homepage",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.automation.stepdef.LoginSteps.fail_me()"
-});
-formatter.result({
-  "error_message": "java.lang.AssertionError: Failled scenario\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.automation.pages.LoginPage.fail(LoginPage.java:50)\r\n\tat com.automation.stepdef.LoginSteps.fail_me(LoginSteps.java:35)\r\n\tat ✽.fail me(file:///C:/Users/khima/java-learning/AssignmentTestNGProject/src/test/resources/features/Login.feature:21)\r\n",
-  "status": "failed"
-});
-formatter.after({
-  "status": "passed"
-});
-formatter.background({
-  "name": "",
-  "description": "",
-  "keyword": "Background"
-});
-formatter.before({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user opens the website",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.automation.stepdef.LoginSteps.open_website()"
+  "location": "com.automation.stepdef.HomeSteps.verify_user_is_on_homepage()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Verify login unsuccessful for valid cred",
+  "name": "verify data on user listing page",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@Regression"
-    },
-    {
-      "name": "@Chirag"
+      "name": "@datatable1"
     }
   ]
 });
 formatter.step({
-  "name": "user login with invalid credential",
+  "name": "user clicks on Job title tab under admin and job menu",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.automation.stepdef.LoginSteps.login_with_invalid_cred()"
+  "location": "com.automation.stepdef.HomeSteps.clickOnJobTitle()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "fail me",
+  "name": "verify user is on job titles page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.automation.stepdef.LoginSteps.fail_me()"
+  "location": "com.automation.stepdef.JobTitleSteps.verify_user_is_on_job_title_page()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: Failled scenario\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat com.automation.pages.LoginPage.fail(LoginPage.java:50)\r\n\tat com.automation.stepdef.LoginSteps.fail_me(LoginSteps.java:35)\r\n\tat ✽.fail me(file:///C:/Users/khima/java-learning/AssignmentTestNGProject/src/test/resources/features/Login.feature:26)\r\n",
-  "status": "failed"
+  "status": "passed"
+});
+formatter.step({
+  "name": "verify job title data",
+  "rows": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.automation.stepdef.JobTitleSteps.verifyJobTitleData(io.cucumber.datatable.DataTable)"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"

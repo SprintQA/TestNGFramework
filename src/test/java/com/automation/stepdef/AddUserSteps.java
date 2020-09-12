@@ -23,12 +23,12 @@ public class AddUserSteps {
 	public void click_on_save_button() {
 		addUserPage.clickOnSaveBtn();
 	}
-	
+
 	@When("user enter username less than five char")
 	public void enterUsernameLessthanFiveChar() {
 		addUserPage.enterUsernameLessthanFiveChar();
 	}
-	
+
 	@When("verify invalid user error message is dispalyed")
 	public void validateInvalidUsernameError() {
 		addUserPage.validateInvalidUsernameError();

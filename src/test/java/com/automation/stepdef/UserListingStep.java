@@ -1,7 +1,11 @@
 package com.automation.stepdef;
 
+import java.util.List;
+import java.util.Map;
+
 import com.automation.pages.UserListingPage;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -23,5 +27,19 @@ public class UserListingStep {
 	public void verify_success_message_is_displayed() {
 		userListingPage.verifySuccessMsg();
 	}
+	
+	@Then("verify user data on user listing pages without header")
+	public void verify_user_data_on_user_listing_page(DataTable dataTable) {
+		List<List<String>> listOfData = dataTable.asLists();
+		userListingPage.verifyUsersData(listOfData);
+	}
+	
+	@Then("verify user data on user listing pages with header")
+	public void verify_user_data_on_user_listing_page_with_header(DataTable dataTable) {
+		 List<Map<String, String>> listOfData = dataTable.asMaps();
+		userListingPage.verifyUserDataUsingHeader(listOfData);
+	}
+
+	
 
 }
