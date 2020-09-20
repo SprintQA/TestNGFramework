@@ -1,16 +1,21 @@
 package com.automation.utility;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.mysql.cj.protocol.Resultset;
 
 // Helper, WebElementUtils
 public class CommonMethods {
@@ -76,6 +81,24 @@ public class CommonMethods {
 				System.out.println(actData);
 			}
 		}
+	}
+
+	public static void verifyDataBaseData(String query, List<Map<String, String>> data) throws SQLException {
+		DataBaseUtils.connectDataBase();
+		ResultSet result = DataBaseUtils.getData(query);
+		
+		for (int i = 0; i < data.size(); i++) {
+
+			Set<String> setOfKey = data.get(i).keySet();
+			List<String> listOfKey = new ArrayList<String>(setOfKey);
+
+			for (int j = 0; j < listOfKey.size(); j++) {
+				String expData = data.get(i).get(listOfKey.get(j));
+				String actData = result.getString(listOfKey.get(j));
+				Assert.assertTrue("", expData.equalsIgnoreCase(actData));
+			}
+		}
+		
 	}
 
 }
